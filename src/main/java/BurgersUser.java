@@ -10,6 +10,9 @@ public class BurgersUser {
         this.password = password;
     }
 
+    public BurgersUser() {
+    }
+
 
     public String getEmail() {
         return email;
