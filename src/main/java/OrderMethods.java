@@ -37,4 +37,26 @@ public class OrderMethods extends RestClient {
                         .then();
     }
 
+    @Step("Get auth users orders")
+    public ValidatableResponse getAuthOrders(String accessToken) {
+        return
+                RestAssured.given()
+                        .spec(getBaseSpec())
+                        .header("Authorization", accessToken)
+                        .when()
+                        .get("/api/orders/")
+                        .then();
+    }
+
+    @Step("Get order without auth")
+    public ValidatableResponse getOrdersWithoutAuth() {
+        return
+                RestAssured.given()
+                        .spec(getBaseSpec())
+                        .when()
+                        .get("/api/orders/")
+                        .then();
+    }
+
+
 }
