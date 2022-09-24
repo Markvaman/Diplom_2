@@ -42,4 +42,5 @@ public class BurgersUser {
         this.password = password;
     }
 
+
 }

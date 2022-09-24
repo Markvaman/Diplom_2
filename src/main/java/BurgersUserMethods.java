@@ -16,11 +16,11 @@ public class BurgersUserMethods extends RestClient {
                         .then();
     }
     @Step("Login with credentials")
-        public ValidatableResponse login(BurgersUser user) {
+        public ValidatableResponse login(UserCredentials userCredentials) {
             return
                     given()
                             .spec(getBaseSpec())
-                            .body(user)
+                            .body(userCredentials)
                             .when()
                             .post("/api/auth/login")
                             .then();
