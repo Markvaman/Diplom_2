@@ -1,12 +1,12 @@
 public class BurgersUser {
     private String email;
-    private String login;
+    private String name;
     private String password;
 
 
-    public BurgersUser(String email, String login, String password) {
+    public BurgersUser(String email, String password, String name) {
         this.email = email;
-        this.login = login;
+        this.name = name;
         this.password = password;
     }
 
@@ -22,12 +22,12 @@ public class BurgersUser {
         this.email = email;
     }
 
-    public String getLogin() {
-        return login;
+    public String getName() {
+        return name;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setLogin(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
@@ -37,4 +37,9 @@ public class BurgersUser {
     public void setPassword(String password) {
         this.password = password;
     }
+    public BurgersUser (String email, String password){
+        this.email = email;
+        this.password = password;
+    }
+
 }
