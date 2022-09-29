@@ -16,7 +16,7 @@ public class UserLoginTests {
     @Before
     public void setUp() {
         userMethods = new BurgersUserMethods();
-        user = new BurgersUser("twentyseven@gmail.com", "7777", "twentysevenUser");
+        user = new BurgersUser("testUser54@gmail.com", "7777", "testUser54User");
         ValidatableResponse response = userMethods.create(user);
         int statusCode = response.extract().statusCode();
         assertEquals(SC_OK, statusCode);

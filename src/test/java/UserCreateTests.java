@@ -22,7 +22,7 @@ public class UserCreateTests {
     @DisplayName("User account create successfully")
     @Description("Send post to /api/auth/register, status code 200 OK")
     public void userAccountCanBeCreatedTest() {
-        user = new BurgersUser("twenty@gmail.com", "7777", "twentyUser");
+        user = new BurgersUser("testUser53@gmail.com", "7777", "testUser53");
         ValidatableResponse response = userMethods.create(user);
         int statusCode = response.extract().statusCode();
         assertEquals(SC_OK, statusCode);
@@ -38,7 +38,7 @@ public class UserCreateTests {
     @DisplayName("Account with the same data is not created")
     @Description("Send post twice to /api/auth/register, status code 403")
     public void userAccountWithSameDataCannotBeCreatedTest() {
-        user = new BurgersUser("twenty@gmail.com", "7777", "twentyUser");
+        user = new BurgersUser("testuser53@gmail.com", "7777", "testUser53");
         ValidatableResponse response = userMethods.create(user);
         int statusCode = response.extract().statusCode();
         assertEquals(SC_OK, statusCode);
